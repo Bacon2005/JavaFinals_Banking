@@ -6,7 +6,6 @@ import com.tyrone.classes.BankAccount;
 
 import javafx.application.Platform;
 
-import java.text.DecimalFormat;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class UserThread extends Thread {
