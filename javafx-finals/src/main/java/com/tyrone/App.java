@@ -7,21 +7,33 @@ import javafx.scene.Scene;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
+import java.net.URL;
+
 public class App extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
         try {
-            Font.loadFont(getClass().getResource("/fonts/Minecraft-Regular.ttf").toExternalForm(), 12);
-            Parent root = FXMLLoader.load(getClass().getResource("/fxml/home.fxml")); 
+
+            // Load custom font
+            Font.loadFont(
+                getClass().getResourceAsStream("/font/Minecraft.ttf"),
+                14
+            );
+    
+
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/home.fxml"));
 
             Scene scene = new Scene(root);
+            scene.getStylesheets().add(
+                getClass().getResource("/fxml/style.css").toExternalForm()
+            );
 
             primaryStage.setResizable(false);
-
             primaryStage.setScene(scene);
             primaryStage.setTitle("Home");
             primaryStage.show();
+
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -2,6 +2,7 @@ package com.tyrone.controllers;
 
 import com.tyrone.classes.BankAccount;
 import com.tyrone.threads.UserThread;
+import com.tyrone.threads.event;
 
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
@@ -215,6 +216,9 @@ public class Controller {
         UserThread endermanUser = new UserThread(Mending, "Enderman", this);
         UserThread squidUser = new UserThread(Mending, "Squid", this);
         UserThread magmaUser = new UserThread(Nitwit, "Magma", this);
+
+        event events = new event();
+        events.start();
 
         runningThreads.addAll(Arrays.asList(
                 steveUser, creeperUser, alexUser, endermanUser, squidUser, magmaUser));

@@ -5,4 +5,5 @@ com\tyrone\Exceptions\InsufficientFundsException.class
 com\tyrone\App.class
 com\tyrone\controllers\Controller$1.class
 com\tyrone\threads\UserThread.class
+com\tyrone\threads\event.class
 com\tyrone\controllers\Controller$2.class

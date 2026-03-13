@@ -31,7 +31,7 @@ public class UserThread extends Thread {
             int action = ThreadLocalRandom.current().nextInt(100);
 
             // random amount to deposit or withdraw
-            double amount = ThreadLocalRandom.current().nextDouble(10000, 50000);
+            double amount = ThreadLocalRandom.current().nextDouble(20000, 50000);
 
             if (action < 40) {
                 // System.out.println("User: " + name + " is depositing: " + amount + " to " +
